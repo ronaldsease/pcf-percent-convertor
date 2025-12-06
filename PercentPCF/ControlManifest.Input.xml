@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+  <control namespace="ms" constructor="PercentPCF" version="0.0.1" display-name-key="PercentPCF" description-key="Display an decimal or float as a percent" control-type="virtual">
+    <type-group name="numbers">
+      <type>FP</type>
+      <type>Decimal</type>
+    </type-group>
+    <property name="percentageDecimalValue" display-name-key="Percentage Decimal Value" description-key="Decimal or Float value to show as a percent" of-type-group="numbers" usage="bound" required="true" />
+    <property name="numberOfDecimalPlacesToRoundTo" display-name-key="Number of Decimal Places to Round To" description-key="Number of Decimal Places to round to" of-type="Whole.None" usage="input" required="true" default-value="2" />
+    <resources>
+      <code path="index.ts" order="1" />
+      <platform-library name="React" version="16.14.0" />
+      <platform-library name="Fluent" version="9.68.0" />
+    </resources>
+  </control>
+</manifest>
