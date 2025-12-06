@@ -29,14 +29,13 @@ export class PercentPCF implements ComponentFramework.ReactControl<IInputs, IOut
     public getOutputs(): IOutputs {
         return {
             percentageDecimalValue: this.percentageDecimalValue ?? undefined
-
         };
     }
 
     public destroy(): void {
         // Empty
     }
-    
+
     public updatePercentValue = (percentageDecimalValue: number | null): void => {
         this.percentageDecimalValue = percentageDecimalValue;
         this.notifyOutputChanged();

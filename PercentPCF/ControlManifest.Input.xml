@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="ms" constructor="PercentPCF" version="0.0.7" display-name-key="PercentPCF" description-key="Display an decimal or float as a percent" control-type="virtual">
+  <control namespace="ms" constructor="PercentPCF" version="0.0.8" display-name-key="PercentPCF" description-key="Display an decimal or float as a percent" control-type="virtual">
     <type-group name="numbers">
       <type>FP</type>
       <type>Decimal</type>
