@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Input, InputOnChangeData } from "@fluentui/react-components";
+import { FluentProvider, Input, tokens, webLightTheme } from "@fluentui/react-components";
 import { IInputs } from "./generated/ManifestTypes";
 
 export interface IPercentInputProps {
@@ -9,7 +9,7 @@ export interface IPercentInputProps {
 
 export const PercentInput: React.FC<IPercentInputProps> = ({ context, updatePercentValue }) => {
   // Local state for the percent text
-  const decimalPlacesToRoundTo = context.parameters.numberOfDecimalPlacesToRoundTo?.raw ?? 2;
+  const decimalPlacesToRoundTo = context.parameters.numberOfDecimalPlacesToRoundPercentageTo?.raw ?? 2;
   const percentageDecimalValue = context.parameters.percentageDecimalValue?.raw;
   const [percentText, setPercentText] = React.useState(.5.toFixed(2));
 
@@ -43,13 +43,16 @@ export const PercentInput: React.FC<IPercentInputProps> = ({ context, updatePerc
   };
 
   return (
-    <Input
-      value={percentText}
-      onChange={handleChange}
-      onBlur={handleBlur}
-      contentAfter={percentageDecimalValue !== null && percentageDecimalValue !== undefined ? "%" : ""}
-      type="number"
-    />
+    <FluentProvider theme={webLightTheme}>
+      <Input
+        value={percentText}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        contentAfter={percentageDecimalValue !== null && percentageDecimalValue !== undefined ? "%" : ""}
+        type="number"
+        placeholder="---"
+        style={{ backgroundColor: tokens.colorNeutralBackground3 }}
+      />
+    </FluentProvider>
   );
-
 };

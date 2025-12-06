@@ -1,7 +1,7 @@
 {
   "name": "pcf-project",
   "version": "1.0.0",
-  "description": "Project containing your PowerApps Component Framework (PCF) control.",
+  "description": "PCF Component to interact with Dynamics 365/Power Platform Decimal and Float types as percentages.",
   "scripts": {
     "build": "pcf-scripts build",
     "clean": "pcf-scripts clean",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "react": "16.14.0",
-    "@fluentui/react-components": "9.68.0",
+    "@fluentui/react-components": "9.46.2",
     "react-dom": "16.14.0"
   },
   "devDependencies": {
