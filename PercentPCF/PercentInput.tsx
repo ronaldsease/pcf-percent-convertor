@@ -11,7 +11,7 @@ export const PercentInput: React.FC<IPercentInputProps> = ({ context, updatePerc
   // Local state for the percent text
   const decimalPlacesToRoundTo = context.parameters.numberOfDecimalPlacesToRoundPercentageTo?.raw ?? 2;
   const percentageDecimalValue = context.parameters.percentageDecimalValue?.raw;
-  const [percentText, setPercentText] = React.useState(.5.toFixed(2));
+  const [percentText, setPercentText] = React.useState("");
 
   // Keep display in sync if parent value changes
   React.useEffect(() => {
