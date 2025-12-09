@@ -36,6 +36,7 @@ export const PercentInput: React.FC<IPercentInputProps> = ({ context, updatePerc
       const roundedNumber = parsed.toFixed(decimalPlacesToRoundTo);
       const percentAsDecimal = parseFloat((parseFloat(roundedNumber) / 100).toFixed(decimalPlacesToRoundTo + 2));
       updatePercentValue(percentAsDecimal);
+      setPercentText(roundedNumber);
     } else {
       setPercentText("");
       updatePercentValue(null);
@@ -48,7 +49,7 @@ export const PercentInput: React.FC<IPercentInputProps> = ({ context, updatePerc
         value={percentText}
         onChange={handleChange}
         onBlur={handleBlur}
-        contentAfter={percentageDecimalValue !== null && percentageDecimalValue !== undefined ? "%" : ""}
+        contentAfter={"%"}
         type="number"
         placeholder="---"
         style={{ backgroundColor: tokens.colorNeutralBackground3 }}
